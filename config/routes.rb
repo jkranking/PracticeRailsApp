@@ -4,6 +4,6 @@ get 'test', to: 'test#jeff'
 
 get '/accounts', to: 'accounts#index'
 
-get '/accounts/:id', to: 'accounts#show'
+get '/accounts/:id', to: 'accounts#show', as: 'account'
 
 end

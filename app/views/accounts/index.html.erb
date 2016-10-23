@@ -1,3 +1,4 @@
 <% @accounts.each do |account| %>
-  <%= link_to account.id, accounts_path(id: account.id) %>
+  <%= link_to account.id, account_path(id: account.id) %>
 <% end %>
+
