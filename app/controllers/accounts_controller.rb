@@ -2,10 +2,10 @@ class AccountsController < ApplicationController
 
   def index
     @accounts = Account.all
-  end 
+  end
 
   def show
     @account = Account.find(params[:id])
-  end 
+  end
 
-end 
+end
