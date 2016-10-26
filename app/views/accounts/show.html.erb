@@ -1,2 +1,2 @@
-this is the show page for account <%= @account.id %>
-
+<%= @account.id %>
+<%= link_to "Account Users", accounts_users_path(id: @account.id) %>
