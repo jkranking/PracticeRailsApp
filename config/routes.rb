@@ -2,16 +2,11 @@ Rails.application.routes.draw do
 
 root to: 'accounts#index'
 
-get 'test', to: 'test#jeff'
+# get '/accounts/:id/users', to: 'accounts#users_index', as: 'accounts_users'
 
-get '/accounts', to: 'accounts#index'
+  resources :users, only: [:index, :show]
 
-get '/accounts/:id', to: 'accounts#show', as: 'account'
-
-get '/accounts/:id/users', to: 'accounts#users_index', as: 'accounts_users'
-
-get '/users', to: 'users#index'
-
-get '/users/:id', to: 'users#show', as: 'user'
-
-end
+  resources :accounts, only: [:index, :show] do 
+    resources :users
+  end 
+end 
