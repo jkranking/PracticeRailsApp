@@ -9,7 +9,7 @@ class AccountsController < ApplicationController
   end
 
   def users_index
-    @account = Account.find(params[:id]).users 
+    @users = Account.find(params[:id]).users 
   end 
 
 end
