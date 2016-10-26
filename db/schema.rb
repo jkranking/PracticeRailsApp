@@ -13,8 +13,6 @@
 ActiveRecord::Schema.define(version: 20161022005132) do
 
   create_table "accounts", force: :cascade do |t|
-    t.integer "user_id"
-    t.index ["user_id"], name: "index_accounts_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
