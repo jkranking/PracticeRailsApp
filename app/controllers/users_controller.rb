@@ -1,7 +1,10 @@
 class UsersController < ApplicationController
 
   def index
-    @users = User.all
+    if params[:account][id:] 
+      @users = Account.find(params[id:]).users
+    else @users = User.all
+    end 
   end 
 
   def show
