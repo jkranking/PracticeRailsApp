@@ -8,8 +8,4 @@ class AccountsController < ApplicationController
     @account = Account.find(params[:id])
   end
 
-  def users_index
-    @users = Account.find(params[:id]).users 
-  end 
-
 end
