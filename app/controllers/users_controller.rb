@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new
+    @user = User.new(user_params)
     if @user.save
       redirect_to user_path(@user.id)
     end 
@@ -24,8 +24,10 @@ class UsersController < ApplicationController
     @user = User.new
   end 
 
-  def update
-    @user = User.find(params[:id])
-  end 
+private
+
+  def user_params
+    params.require(:user).permit(:name, :email, :password, :confirmation, :is_admin)
+  end
 
 end
