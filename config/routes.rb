@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-root to: 'accounts#index'
+  root to: 'home#home'
 
-  resources :users, only: [:index, :show]
+  resources :users, except: [:edit, :update]
 
   resources :accounts, only: [:index, :show] do 
     resources :users, only: [:index, :show]
