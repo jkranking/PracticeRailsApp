@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161022005132) do
+ActiveRecord::Schema.define(version: 20161028170343) do
 
   create_table "accounts", force: :cascade do |t|
   end
@@ -19,6 +19,9 @@ ActiveRecord::Schema.define(version: 20161022005132) do
     t.string  "name"
     t.string  "password"
     t.integer "account_id"
+    t.string  "email"
+    t.integer "age"
+    t.boolean "is_admin"
     t.index ["account_id"], name: "index_users_on_account_id"
   end
 
