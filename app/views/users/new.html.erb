@@ -1,22 +1,20 @@
-<%= form_for @user do |f| %>
+<ul>
+  <%= form_for @user do |f| %>
+  <li><%= f.label :name %></li>
+  <li><%= f.text_field :name %></li>
 
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <li><%= f.label :password %></li>
+  <li><%= f.text_field :password %></li>
 
-  <%= f.label :password %>
-  <%= f.text_field :password %>
+  <li><%= f.label :email %></li>
+  <li><%= f.text_field :email %></li>
 
-  <%= f.label :account_id %>
-  <%= f.number_field :account_id %>
+  <li><%= f.label :age %></li>
+  <li><%= f.number_field :age %></li>
 
-  <%= f.label :email %>
-  <%= f.text_field :email %>
-
-  <%= f.label :age %>
-  <%= f.number_field :age %>
-
-  <%= f.label :is_admin %>
-  <%= f.text_field :is_admin %>
+  <li><%= f.label :is_admin %></li>
+  <li><%= f.check_box :is_admin  %></li>
   
-  <%= f.submit "Save changes" %>
-<% end %>
+  <li><%= f.submit "Save changes" %></li>
+  <% end %>
+</ul>

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-root to: 'accounts#index'
+  root to: 'accounts#index'
 
   resources :users, only: [:index, :show, :create, :new, :update]
 
