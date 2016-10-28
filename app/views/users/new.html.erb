@@ -1,20 +1,21 @@
+<h1>Create User</h1>
 <ul>
   <%= form_for @user do |f| %>
-  <li><%= f.label :name %></li>
-  <li><%= f.text_field :name %></li>
+    <li><%= f.label :name %></li>
+    <li><%= f.text_field :name %></li>
 
-  <li><%= f.label :password %></li>
-  <li><%= f.text_field :password %></li>
+    <li><%= f.label :password %></li>
+    <li><%= f.text_field :password %></li>
 
-  <li><%= f.label :email %></li>
-  <li><%= f.text_field :email %></li>
+    <li><%= f.label :email %></li>
+    <li><%= f.text_field :email %></li>
 
-  <li><%= f.label :age %></li>
-  <li><%= f.number_field :age %></li>
+    <li><%= f.label :age %></li>
+    <li><%= f.number_field :age %></li>
 
-  <li><%= f.label :is_admin %></li>
-  <li><%= f.check_box :is_admin  %></li>
-  
-  <li><%= f.submit "Save changes" %></li>
+    <li><%= f.label :is_admin %></li>
+    <li><%= f.check_box :is_admin  %></li>
+    
+    <li><%= f.submit "Save changes" %></li>
   <% end %>
 </ul>
